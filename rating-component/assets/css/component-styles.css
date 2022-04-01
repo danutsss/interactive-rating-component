@@ -7,6 +7,9 @@
     --neutral-color-mediumgray: hsl(216, 12%, 54%);
     --neutral-color-darkblue: hsl(213, 19%, 18%);
     --neutral-color-vdarkblue: hsl(216, 12%, 8%);
+
+    --color-gradient-darkblue: 213, 19%, 18%;
+    --color-gradient-vdarkblue: 216, 12%, 8%;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
     font-family: "Overpass", sans-serif;
     font-size: 15px;
     font-weight: 400;
-    background-color: var(--neutral-color-mediumgray);
+    background-image: linear-gradient(to bottom left, hsla(var(--color-gradient-darkblue), 1), hsla(var(--color-gradient-vdarkblue), 1));
     display: flex;
     flex-direction: column;
     justify-content: center;
