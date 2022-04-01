@@ -1,4 +1,6 @@
-# Brief
+# Interactive rating component
+
+## Brief
 
 My challenge is to build out an interactive rating component and get it looking as close to the design as possible.
 
