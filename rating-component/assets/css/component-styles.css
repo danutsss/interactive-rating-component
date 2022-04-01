@@ -10,10 +10,15 @@
 }
 
 body {
+    height: 100vh;
     font-family: "Overpass", sans-serif;
     font-size: 15px;
     font-weight: 400;
     background-color: var(--neutral-color-mediumgray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .attribution {
@@ -79,7 +84,6 @@ body {
 .rating-component {
     background-color: var(--neutral-color-vdarkblue);
     border-radius: 25px;
-    margin: 0 auto;
     max-width: 375px;
     padding: 15px;
 }
