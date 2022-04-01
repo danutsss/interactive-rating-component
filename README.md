@@ -1,6 +1,8 @@
-# Brief
+# Interactive rating component
 
-My challenge is to build out an interactive rating component and get it looking as close to the design as possible.
+## Brief
+
+My challenge was to build an interactive rating component and get it looking as close to the design as possible.
 
 ## The challenge
 
