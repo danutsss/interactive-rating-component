@@ -1,32 +1,28 @@
-const rating_level = document.querySelectorAll('.rating-level');
+var ratingLevel = document.querySelectorAll('.rating-level');
 
-rating_level.forEach(function(item, index) {
+ratingLevel.forEach(function(rating, index) {
     (function(i) {
-        rating_level[i].addEventListener("click", function() {
-            if(this.classList.contains("selected")) {
-                this.classList.remove("selected");
-            } else {
-                this.classList.add("selected");
-            }
+        ratingLevel[i].addEventListener("click", function() {
+            this.classList.contains("selected") ? this.classList.remove("selected") : this.classList.add("selected");
         
-            var count = this.getAttribute('data-rating');
+            var dataRating = this.getAttribute('data-rating');
         
-            for(var i = 0; i < count - 1; i ++) {
+            for(var i = 0; i < dataRating - 1; i ++) {
                 document.querySelectorAll('.rating-level')[i].classList.remove('selected');
             }
         });
     }(index))
 });
 
-const submit_rating = document.getElementById('submit');
+var submitRating = document.getElementById('submit');
 
-submit_rating.onclick = function sendRating() {
-    const rating_levels = document.getElementById('rating-levels');
-    const check_rating = rating_levels.querySelectorAll('.selected');
+submitRating.onclick = function sendRating() {
+    var ratingLevels = document.getElementById('rating-levels');
+    var checkRating = ratingLevels.querySelectorAll('.selected');
 
-    if(!check_rating.length) {
-        var alert_text = document.querySelector('.alert-text');
-        alert_text.textContent = "Please rate us.";
+    if(!checkRating.length) {
+        var alertText = document.querySelector('.alert-text');
+        alertText.textContent = "Please rate us.";
     } else {
         document.getElementById("thank-you").removeAttribute("hidden");
         document.getElementById("rating").setAttribute("hidden", "hidden");
